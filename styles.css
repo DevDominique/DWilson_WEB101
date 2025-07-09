@@ -117,8 +117,35 @@ button:hover {
   - [ ] Any time after
 ***/
 
-.footer { /* Example B: This styles elements with class="footer" */
-    
+.site-footer { /* Example B: This styles elements with class="footer" */
+    background-color: #1a1a3d;
+    color:white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-content p {
+    color: white;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:visited {
+    color: gray;
+}
+
+.footer-nav a:hover {
+    color: #92c4ad;
+}
+
+.footer-nav a:active {
+    color: turquoise
 }
 
 /*** Navbar [PLACEHOLDER] [ADDED IN UNIT 4] ***/
