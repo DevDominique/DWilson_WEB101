@@ -9,9 +9,10 @@ Technologies USed:
 -CSS
 -Git & GitHub for version control
 
-How can you view the live site?
-1) Open the index.html file in your browser, or
-2) Clone the repo
+3 Ways You Can View This Website:
+1) [Live Demo] https://devdominique.github.io/DWilson_WEB101/
+3) Open the index.html file in your browser
+4) Clone the repo
 
 Author: Dominique
 Web Developer in Progress
