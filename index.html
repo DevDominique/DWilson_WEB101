@@ -108,23 +108,48 @@
         - [ ] Any time between / after
         --> 
         
-        <section id="events">
-            <h2><center>Upcoming Meetings</center></h2>
-            <div class="event-column">
-                <img src="./media/elders.jpg" alt="three elderly wise women smile">
-                <h3>September 14, 2025: Wisdom Keepers & Elders</h3>
-                <p>Sacred feminine memoirs and pearls of wisdom.</p>
-                    
-                <img src="./media/shadow-work.jpg" alt="a transformed woman rises from a blue-violet flame like a phoenix">
-                <h3>October 12, 2025: Shadow Work</h3>
-                <p>Transformation, healing, and rebirth.</p>
-
-                <img src="./media/sacred-roots.jpg" alt="an ancestral tree with roots deep into the earth">
-                <h3>November 9, 2025: Sacred Roots</h3>
-                <p>Honoring lineage and ancestral knowledge.</p>
-
-                <button type="button">RSVP</button>
+        <section id="schedule">
+            <div class="section-header">
+                <h2>Upcoming Meetings</h2>
             </div>
+            <div class="event-row">
+                <div class="meetings">
+                    <img src="./media/elders.jpg" alt="three elderly wise women smile">
+                    <h3>September 14, 2025: Wisdom Keepers & Elders</h3>
+                    <p>Sacred feminine memoirs and pearls of wisdom.</p>
+                    <button type="button">Sign Up</button>
+                </div>
+                <div class="meetings">
+                    <img src="./media/shadow-work.jpg" alt="a transformed woman rises from a blue-violet flame like a phoenix">
+                    <h3>October 12, 2025: Shadow Work</h3>
+                    <p>Transformation, healing, and rebirth.</p>
+                    <button type="button">Sign Up</button>
+                </div>
+                <div class="meetings">    
+                    <img src="./media/sacred-roots.jpg" alt="an ancestral tree with roots deep into the earth">
+                    <h3>November 9, 2025: Sacred Roots</h3>
+                    <p>Honoring lineage and ancestral knowledge.</p>
+                    <button type="button">Sign Up</button>
+                </div>
+            </div>    
+        </section>
+
+        <section id="rsvp">
+            <div class="form">
+                <h2>Become a Member</h2>
+                <form id="memberApp">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Email" required>
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" placeholder="Phone Number">
+                    <input type="submit">
+                </form>
+                <div id="confirmationMessage"></div>
+            </div>    
         </section>
 
         <!-- rsvp [PLACEHOLDER] [ADDED IN UNIT 6] -->
@@ -175,6 +200,7 @@
         </footer>
 
         <!-- script [PLACEHOLDER] [ADDED IN UNIT 5] -->
-
+    
+        <script src="script.js"></script>    
     </body>
 </html>

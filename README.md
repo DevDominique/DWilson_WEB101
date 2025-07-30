@@ -42,3 +42,4 @@ Design and develop a clean, responsive website using HTML5 and CSS3 to simulate 
 ---
 
 **Author:** Dominique — *Web Developer in Progress* 💻🌱
+:)

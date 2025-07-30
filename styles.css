@@ -77,6 +77,18 @@ a * {
     
 }
 
+.section-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color:#1a1a3d;
+  letter-spacing: 0.05em;
+}
+
 button {
     /* Example Style, replace with your own! */
     background-color: #75a690;    /* button color */
@@ -245,7 +257,12 @@ button:hover {
   padding: 3rem 2rem;
 }
 
-#about h2,
+#about h2 {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+}
+
 #about h3,
 #about h4,
 #about p,
@@ -265,7 +282,13 @@ button:hover {
   - [ ] Any time after
 ***/
 
-.event-column {
+.event-row {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.meetings {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -295,9 +318,18 @@ button:hover {
   display: block;
 } */
 
-#events h2,
-#events h3 {
+#schedule h2,
+#schedule h3 {
   color:#1a1a3d;
+}
+
+#schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
 }
 
 /*** Links Section ***
@@ -327,6 +359,39 @@ button:hover {
   When To Modify:
   - [ ] Any time (OPTIONAL)
 ***/
+/* RSVP Form*/
+#rsvp {
+  background-color:#75a690;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+#rsvp h2 {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem, 3rem;
+}
+
+input {
+  display: block;
+  margin: 10px, 0px;
+}
+
+#confirmationMessage {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
 
 :root {
     /* Light Mode */
