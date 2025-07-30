@@ -208,6 +208,17 @@ button:hover {
   transition: background-color 0.3s ease;
 }
 
+#theme-button {
+  background-color: #3e3377;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration:none;
+  font-weight: bolder;
+  border-color:white;
+  border-width: 15px;
+}
+
 /** Hero Section**/
 .hero {
   background-color: #b9295d;
@@ -344,10 +355,107 @@ button:hover {
 ***/
 
 
-/*** RSVP [PLACEHOLDER] [ADDED IN UNIT 6] ***/
+/*** RSVP Section ***
+  
+  Purpose:
+  - Add style rules for your website's RSVP form
+
+  When To Modify:
+  - [ ] Project 6 (REQUIRED FEATURE)
+  - [ ] Project 7 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+
+#rsvp {
+  color: white;
+  background-color:#1a1a3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.rsvp-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.rsvp-para{
+  width: 55%;
+  padding-right: 10px;
+}
+
+.rsvp-participants {
+  width: 45%;
+  padding-right: 10px;
+}
+
+.form-container {
+  padding-top: 2rem;
+  display: flex;
+  align-items: stretch;
+}
+
+#rsvp h2 {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+}
+
+#rsvp h3, p {
+  color: white;
+}
+
+
+input[type="submit"] {
+  margin-top: 16px;
+  padding: 12px 24px;
+}
+
+.error {
+  background-color: #045d5d;
+  border-style: solid;
+  border-width: 2px;
+  border-color:#75a690
+}
+
+#confirmationMessage {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
 /*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
 /*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
-/*** Dark Mode [PLACEHOLDER] [ADDED IN UNIT 5] ***/
+
+/* Default dark mode style */
+.dark-mode {
+  background-color: black;
+  color: white;
+
+}
+
+/* Example: Different dark mode style for h1 */
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3 {
+    color:white;
+}
+
+.dark-mode #schedule h2,
+.dark-mode #schedule h3 {
+  color: white;
+}
+
+/* Example: Different dark mode style for visited links */
+.dark-mode a:visited * {
+color:#75a690;
+}
+
 
 /*** Custom Colors (OPTIONAL) ***
   
@@ -360,38 +468,7 @@ button:hover {
   - [ ] Any time (OPTIONAL)
 ***/
 /* RSVP Form*/
-#rsvp {
-  background-color:#75a690;
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-}
 
-#rsvp h2 {
-  color: white;
-  font-size: 2rem;
-  letter-spacing: 0.05em;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 2rem, 3rem;
-}
-
-input {
-  display: block;
-  margin: 10px, 0px;
-}
-
-#confirmationMessage {
-  margin-top: 1rem;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-}
 
 :root {
     /* Light Mode */

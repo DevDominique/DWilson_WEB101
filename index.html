@@ -45,10 +45,10 @@
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#events">Upcoming Meetings</a></li>
+                    <li><a href="#schedule">Upcoming Meetings</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <a href="rsvp" class="nav-button">RSVP</a>
+                <button type="button" id="theme-button">Toggle Dark Mode</button>
                 </nav>
         <img id="header-img" src=""/>
         <h1>Wild Moon Book Club</h1>
@@ -56,14 +56,14 @@
             <div class="hero-text">
                 <h2>Click the button to join us at our next meeting!</h2>
                 <button type="button">RSVP</button></div>
-            <div class="hero-video">
+            <!-- <div class="hero-video">
                 <video width="315" height="560" autoplay muted loop controls playsinline>
                     <source src="./media/book-club-AI.mp4" type="video/mp4">
                 </video>
-            </div>   
-            <!-- <div class="hero-image">
+            </div> -->  
+            <div class="hero-image">
                 <img src="./media/women-book-club.jpg" alt="Women dance in a circle under a starlit sky. Some of them have a book in their outstretched hand.">
-            </div> --> 
+            </div>
         </section>
         </header>
 
@@ -134,25 +134,57 @@
             </div>    
         </section>
 
-        <section id="rsvp">
-            <div class="form">
-                <h2>Become a Member</h2>
-                <form id="memberApp">
-                    <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname" placeholder="First Name" required>
-                    <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname" placeholder="Last Name" required>
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" placeholder="Email" required>
-                    <label for="phone">Phone Number:</label>
-                    <input type="text" id="phone" name="phone" placeholder="Phone Number">
-                    <input type="submit">
-                </form>
-                <div id="confirmationMessage"></div>
-            </div>    
-        </section>
 
-        <!-- rsvp [PLACEHOLDER] [ADDED IN UNIT 6] -->
+        <!-- rsvp
+
+Purpose:
+- Section for users to sign up for the event
+- Contains a form for users to input their information, 
+and a list of other users who have signed up
+
+When To Modify:
+- [ ] Project 6 (REQUIRED FEATURE) 
+- [ ] Project 6 (STRETCH FEATURE) 
+- [ ] Any time after
+--> 
+<div id="rsvp">
+    <div class="rsvp-container">
+        <div class="rsvp-para">
+            <h2>Join Us for Brewed Wisdom & Wild Words! 🫖</h2>
+            <p>Each gathering is a warm infusion of heartfelt dialogue, healing insight, and wild feminine power — brewed with intention, stirred by sisterhood. To complement the energy of each month's theme, we’ll serve a unique herbal tea blend handpicked to nourish, balance, and awaken. From grounding roots to floral whispers, each sip is part of the ritual. Autumn’s calling. Are you coming?</p>
+        </div>
+        <div class="rsvp-participants">
+            <h3>RSVP</h3>
+            <p>Whether you enjoy reading daily or occasionally, there is nothing like having a group of amazing women to share your experince with! We promise, you'll get so much more out of diving deep with us every month than simply reading a book. Complete the form below to RSVP for our next meeting. Hurry, seats are filling up fast!</p>
+            <p>👑 Sara from Plano joined the circle!</p>
+            <p>👑 Amy from Lewisville joined the circle!</p>
+            <p>👑 Monica from Aubrey joined the circle!</p>
+            <p id="rsvp-count">✨So far, 3 Sisters have RSVP'd to our next meeting!</p>
+        </div>
+    </div>
+
+    <!--- Sign RSVP Form --->
+    <div class="form-container">
+        <form id="rsvp-form" title="rsvp-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="First Name" required>
+            <label for="city">Home City:</label>
+            <input type="text" id="city" name="city" placeholder="Home City" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Email" required>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" placeholder="Phone">
+        </form>
+        <!-- Submit button -->
+        <button id="rsvp-button">Submit RSVP</button>
+    </div>      
+</div>
+
+        <!-- <iframe width="560" height="560"  src="https://youtube.com/shorts/sJz9F1zifbY?"></iframe> -->
+        <center><video width="560" height="560" autoplay muted loop controls playsinline>
+            <source src="./media/share-video.mp4" type="video/mp4">
+        </video></center>
+
         <!-- success modal [PLACEHOLDER] [ADDED IN UNIT 9] --> 
 
         <!-- links
@@ -181,19 +213,13 @@
             </article>
         </a>
          
-        <!-- <iframe width="560" height="315"  src="https://youtube.com/shorts/sJz9F1zifbY?"></iframe> -->
-        <video width="315" height="560" autoplay muted loop controls playsinline>
-            <source src="./media/book-club-AI.mp4" type="video/mp4">
-        </video>
-
-
         <!-- footer [PLACEHOLDER] [ADDED IN UNIT 3] -->
         <footer class="site-footer">
             <div class="footer-content">
                 <p>&copy; 2025 Wild Moon Collective. All Rights Reserved.</p>
                 <nav class="footer-nav">
                     <a href="#about">About</a>
-                    <a href="#events">Upcoming Meetings</a>
+                    <a href="#schedule">Upcoming Meetings</a>
                     <a href="#contact">Contact</a>
                 </nav>
             </div>
