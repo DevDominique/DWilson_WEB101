@@ -63,7 +63,36 @@ const printReceipt = (event) => {
 
 form.addEventListener("submit", printReceipt);
 
-/*** Form Validation [PLACEHOLDER] [ADDED IN UNIT 7] ***/
+/*** Form Validation ***
+  
+  Purpose:
+  - Prevents invalid form submissions from being added to the list of participants.
+
+  When To Modify:
+  - [ ] Project 7 (REQUIRED FEATURE)
+  - [ ] Project 7 (STRETCH FEATURE)
+  - [ ] Project 9 (REQUIRED FEATURE)
+  - [ ] Any time between / after
+***/
+
+// Step 1: We actually don't need to select the form button again -- we already did it in the RSVP code above.
+
+// Step 2: Write the callback function
+const validateForm = () => {
+
+  let containsErrors = false;
+
+  var rsvpInputs = document.getElementById("rsvp-form").elements;
+  // TODO: Loop through all inputs
+
+  // TODO: Inside loop, validate the value of each input
+
+  // TODO: If no errors, call addParticipant() and clear fields
+
+}
+
+// Step 3: Replace the form button's event listener with a new one that calls validateForm()
+
 /*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
 /*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
 
