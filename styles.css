@@ -55,7 +55,8 @@ h1 {
 }
 
 h2 {
-color: black
+  font-size: 2rem;
+  letter-spacing: 0.05em;
     
 }
 
@@ -221,7 +222,9 @@ button:hover {
 
 /** Hero Section**/
 .hero {
-  background-color: #b9295d;
+  /* background-color:#75a690; */
+  background: linear-gradient(30deg, #1a1a3d, #333377, #1a1a3d);
+
   display: flex;
   align-items: stretch;
 }
@@ -260,12 +263,12 @@ button:hover {
   - [ ] Any time after
 ***/
 #about {
-  background-color: #045d5d;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 2rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 #about h2 {
@@ -274,12 +277,11 @@ button:hover {
   letter-spacing: 0.05em;
 }
 
-#about h3,
-#about h4,
-#about p,
-#about li {
-  color: white;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+.about-container {
+  background-color: #045d5d;
+  max-width: 50%;
+  border-radius: 10px;
+  padding: 2rem;
 }
 
 /*** Schedule Section ***
@@ -368,11 +370,15 @@ button:hover {
 
 #rsvp {
   color: white;
-  background-color:#1a1a3d;
+  background: linear-gradient(30deg, #1a1a3d, #333377, #1a1a3d);
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
+}
+
+#rsvp h2, h3 {
+  text-align: center;
 }
 
 .rsvp-container {
@@ -395,14 +401,12 @@ button:hover {
 
 .form-container {
   padding-top: 2rem;
-  display: flex;
-  align-items: stretch;
 }
 
 #rsvp h2 {
   color: white;
-  font-size: 2rem;
-  letter-spacing: 0.05em;
+  /* font-size: 2rem;
+  letter-spacing: 0.05em; */
 }
 
 #rsvp h3, p {
@@ -416,10 +420,10 @@ input[type="submit"] {
 }
 
 .error {
-  background-color: #045d5d;
+  background-color: #ee979e;
   border-style: solid;
   border-width: 2px;
-  border-color:#75a690
+  border-color:red
 }
 
 #confirmationMessage {
