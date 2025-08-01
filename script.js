@@ -124,3 +124,23 @@ form.addEventListener("submit", validateForm);
 /*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
 
 //document.addEventListener("DOMContentLoaded", function () {
+
+/***Carousel Funtionality for "Event Schedule" Section */
+
+//Select carousel container and buttons
+const carousel = document.querySelector('.event-carousel');
+const leftBtn = document.querySelector('.carousel-btn-left');
+const rightBtn = document.querySelector('.carousel-btn-right');
+
+//Define scroll amt based on card width and gap
+const cardWidth = 300 + 32;
+const scrollAmount = cardWidth * 3;
+
+//Add scroll behavior to btns
+leftBtn.addEventListener('click', () => {
+  carousel.scrollBy({ left: -scrollAmount, bahavior:'smooth' });
+});
+
+rightBtn.addEventListener('click', () => {
+  carousel.scrollBy({ left: scrollAmount, bahavior:'smooth' });
+});

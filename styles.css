@@ -50,7 +50,7 @@ body {
 ***/
 
 h1 {
-    color:#045d5d
+    color:#1a1a3d;
     
 }
 
@@ -61,7 +61,7 @@ h2 {
 }
 
 h3 {
-    color: black
+    color:#1a1a3d
 }
 
 h4 {
@@ -73,9 +73,22 @@ p {
     
 }
 
-a,
-a * {
-    
+a:link {
+  color: #1a1a3d; /* default unvisited link */
+  text-decoration: none;
+}
+
+a:visited {
+  color: #333366; /* after it's been clicked */
+}
+
+a:hover {
+  color: #92c4ad; /* when hovered */
+  text-decoration: underline;
+}
+
+a:active {
+  color: turquoise; /* while clicking */
 }
 
 .section-header {
@@ -102,6 +115,12 @@ button {
 
 button:hover {
     /* Make the button look different when the user hovers over it */
+}
+
+.faded-img {
+  max-width: 350px;
+  box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
 }
 
 /*** header ***
@@ -221,22 +240,22 @@ button:hover {
 }
 
 /** Hero Section**/
-.hero {
+#hero {
   /* background-color:#75a690; */
   background: linear-gradient(30deg, #1a1a3d, #333377, #1a1a3d);
-
+  max-width: 100%;
   display: flex;
-  align-items: stretch;
+  justify-content: center;
 }
 
-.hero-text {
+#hero-text {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  text-align: left;
+  align-items: flex-end;
   padding: 2rem;
+  gap: 10px;
 }
 
 #hero h2 {
@@ -279,7 +298,7 @@ button:hover {
 
 .about-container {
   background-color: #045d5d;
-  max-width: 50%;
+  max-width: 1280px;
   border-radius: 10px;
   padding: 2rem;
 }
@@ -295,41 +314,95 @@ button:hover {
   - [ ] Any time after
 ***/
 
-.event-row {
+.event-container {
+  background-color: #cfcfcf;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
-}
-
-.meetings {
-  display: flex;
-  flex-direction: column;
   gap: 2rem;
-  justify-content: space-between;
-  align-items: center;
   padding: 3rem 2rem;
 }
 
-/* .event-card {
-  flex: 1 1 300px;
-  max-width: 350px;
+.carousel-wrapper {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.event-carousel {
+  display: flex;
+  overflow-x: auto;
+  transition: transform 0.5s ease;
+  scroll-behavior: smooth;
+  gap: 2rem;
+  scroll-snap-type: x mandatory;
   padding: 1rem;
+  max-width: 1280px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.event-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.event-card {
+  flex: 0 0 300px;
+  /* flex: 1 1 300px; */
+  scroll-snap-align: start;
+  /* width: 300px; */
+  background-color: #ececec;
+  color: black;
+  border-radius: 10px;
+  /* max-width: 350px; */
+  padding: 1em;
+  margin-right: 2rem;
   text-align: center;
-  box-shadow:l 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 .event-card img {
   width: 100%;
-  max-width: 300px;
-  height:auto;
+  /* max-width: 300px;
+  height:auto; */
+  aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 5px;
   margin-bottom: 1rem;
-  display: block;
-} */
+  /* display: block; */
+}
+
+.carousel-btn-left,
+.carousel-btn-right {
+  background-color: #cfcfcf;
+  color:#1a1a3d;
+}
+
+.carousel-btn-left:hover,
+.carousel-btn-right:hover {
+  background-color: #333366;
+  color: white;
+}
+
+.event-card p {
+  color: black;
+}
 
 #schedule h2,
 #schedule h3 {
@@ -337,6 +410,7 @@ button:hover {
 }
 
 #schedule {
+  background-color: #cfcfcf;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -356,6 +430,32 @@ button:hover {
   - [ ] Any time after
 ***/
 
+#links {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  padding: 2e, 1em;
+}
+
+#links a h3,
+#links a p {
+  color:#1a1a3d;
+}
+
+#links a:hover article,
+#links a:active article {
+  box-shadow: 0 2px 8px rgba(146, 196, 173, 0.4);
+  transform: translateY(-2px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#links a:hover h3,
+#links a:hover p {
+  color:#333377
+}
+
 
 /*** RSVP Section ***
   
@@ -373,7 +473,7 @@ button:hover {
   background: linear-gradient(30deg, #1a1a3d, #333377, #1a1a3d);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   padding: 2rem;
 }
 
@@ -384,8 +484,9 @@ button:hover {
 .rsvp-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   gap: 20px;
-  width: 100%;
+  max-width: 1280px;
   padding-bottom: 50px;
 }
 
@@ -450,9 +551,21 @@ input[type="submit"] {
     color:white;
 }
 
-.dark-mode #schedule h2,
-.dark-mode #schedule h3 {
+.dark-mode #schedule h2 {
   color: white;
+}
+
+.dark-mode #schedule,
+.dark-mode .event-container,
+.dark-mode .carousel-wrapper {
+  background-color: #333333;
+}
+
+.dark-mode #schedule button,
+.dark-mode #hero button {
+  color: white;
+  background-color: #75a690;
+  border: none
 }
 
 /* Example: Different dark mode style for visited links */
@@ -460,6 +573,23 @@ input[type="submit"] {
 color:#75a690;
 }
 
+/**Share Section **/
+
+#share {
+  background-color: #cfcfcf;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2em;
+}
+
+#share-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1em;
+}
 
 /*** Custom Colors (OPTIONAL) ***
   
@@ -471,6 +601,7 @@ color:#75a690;
   When To Modify:
   - [ ] Any time (OPTIONAL)
 ***/
+
 /* RSVP Form*/
 
 

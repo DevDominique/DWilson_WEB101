@@ -45,26 +45,23 @@
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#schedule">Upcoming Events</a></li>
+                    <li><a href="#schedule">Event Scheudle</a></li>
                     <li><a href="#links">Links</a></li>
                 </ul>
                 <button type="button" id="theme-button">Toggle Dark Mode</button>
-                </nav>
-        <img id="header-img" src=""/>
-        <h1 style="text-align: center;">Wild Moon Book Club</h1>
-        <section class="hero" id="hero">
-            <div class="hero-text">
-                <h2>Click the button to join us at our next meeting!</h2>
-                <button type="button">RSVP</button></div>
-            <!-- <div class="hero-video">
-                <video width="315" height="560" autoplay muted loop controls playsinline>
-                    <source src="./media/book-club-AI.mp4" type="video/mp4">
-                </video>
-            </div> -->  
-            <div class="hero-image">
-                <img src="./media/womenBookClub.jpg" alt="Women dance in a circle under a starlit sky. Some of them have a book in their outstretched hand.">
+            </nav>
+            <h1 style="text-align: center;">Wild Moon Book Club</h1>
+            <div id="hero">
+                <div class="hero-text">
+                    <h2>Click the button to join us at our next meeting!</h2>
+                    <a href="#rsvp">
+                        <button type="button">Sign Up</button>
+                    </a>
+                </div>  
+                <div class="hero-image">
+                    <img src="./media/womenBookClub.jpg" alt="Women dance in a circle under a starlit sky. Some of them have a book in their outstretched hand.">
+                </div>
             </div>
-        </section>
         </header>
 
         
@@ -110,25 +107,47 @@
         --> 
         
         <div id="schedule">
-            <h2>Event Schedule</h2>
-            <div class="event-row">
-                <div class="meetings">
-                    <img src="./media/elders.jpg" alt="three elderly wise women smile">
-                    <h3>September 14, 2025: Wisdom Keepers & Elders</h3>
-                    <p>Sacred feminine memoirs and pearls of wisdom.</p>
-                    <button type="button">Sign Up</button>
-                </div>
-                <div class="meetings">
-                    <img src="./media/shadow-work.jpg" alt="a transformed woman rises from a blue-violet flame like a phoenix">
-                    <h3>October 12, 2025: Shadow Work</h3>
-                    <p>Transformation, healing, and rebirth.</p>
-                    <button type="button">Sign Up</button>
-                </div>
-                <div class="meetings">    
-                    <img src="./media/sacred-roots.jpg" alt="an ancestral tree with roots deep into the earth">
-                    <h3>November 9, 2025: Sacred Roots</h3>
-                    <p>Honoring lineage and ancestral knowledge.</p>
-                    <button type="button">Sign Up</button>
+            <h2>2025 Event Schedule</h2>
+            <div class="event-container">
+                <!--Add event cards to a carousel that toggles L/R between months-->
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn-left">⮜</button>
+                    <div class="event-carousel">
+                        <div class="event-card">
+                            <img src="./media/elders.jpg" alt="three elderly wise women smile">
+                            <h3>September 14: Wisdom Keepers & Elders</h3>
+                            <p>Sacred feminine memoirs and pearls of wisdom.</p>
+                            <a href="#rsvp">
+                                <button type="button">Sign Up</button>
+                            </a>
+                        </div>
+                        <div class="event-card">
+                            <img src="./media/shadow-work.jpg" alt="a transformed woman rises from a blue-violet flame like a phoenix">
+                            <h3>October 12: Shadow Work</h3>
+                            <p>Transformation, healing, and rebirth.</p>
+                            <a href="#rsvp">
+                                <button type="button">Sign Up</button>
+                            </a>
+                        </div>
+                        <div class="event-card">    
+                            <img src="./media/sacred-roots.jpg" alt="an ancestral tree with roots deep into the earth">
+                            <h3>November 9: Sacred Roots</h3>
+                            <p>Honoring lineage and ancestral knowledge.</p>
+                            <a href="#rsvp">
+                                <button type="button">Sign Up</button>
+                            </a>
+                        </div>
+                        <!--Add more event cards here-->
+                        <div class="event-card">    
+                            <img src="./media/embersInTheDark.png" alt="an ancestral tree with roots deep into the earth">
+                            <h3>December 14: Embers in the Dark</h3>
+                            <p>Kindling inner light through the longest night.</p>
+                            <a href="#rsvp">
+                                <button type="button">Sign Up</button>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="carousel-btn-right">⮞</button>
                 </div>
             </div>    
         </div>
@@ -148,6 +167,7 @@ When To Modify:
 --> 
         <div id="rsvp">
             <h2>RSVP</h2>
+            <img src="./media/rsvp-books-tea.png" alt="two books stacked on a cozy coffee table near an earthy teal vat of freshly brewed tea" class="faded-img">
             <h3>Brewed Wisdom & Wild Words: Let the tea steep and the stories flow!🫖</h3>
             <div class="rsvp-container">
                 <div class="rsvp-para">                    
@@ -179,11 +199,6 @@ When To Modify:
             </div>      
         </div>
 
-        <!-- <iframe width="560" height="560"  src="https://youtube.com/shorts/sJz9F1zifbY?"></iframe> -->
-        <center><video width="560" height="560" autoplay muted loop controls playsinline>
-            <source src="./media/share-video.mp4" type="video/mp4">
-        </video></center>
-
         <!-- success modal [PLACEHOLDER] [ADDED IN UNIT 9] --> 
 
         <!-- links
@@ -198,20 +213,36 @@ When To Modify:
         -->
         <div id="links"> 
             <h2>Links</h2>
+            <div class="links-container">
+                <a href="#" onclick="event.preventDefault();">
+                    <article>
+                        <h3>Top 5 Summer Reads</h3>
+                        <p>5 Titles that will change your life...</p>
+                    </article>
+                </a>
+                <a href="#" onclick="event.preventDefault();">
+                    <article>
+                        <h3>Are You Bored Yet?</h3>
+                        <p>3 Reasons Why Your Book Club Sucks</p>
+                    </article>
+                </a>
+            </div>
+        </div>
 
-            <!-- This <a> block is one link.  Copy and paste all 6 lines to create another link. -->
-            <a class="block" href="#">
-                <article>
-                    <h3>Top 5 Summer Reads</h3>
-                    <p>5 Titles that will change your life...</p>
-                </article>
-            </a>
-            <a class="block" href="#">
-                <article>
-                    <h3>Are You Bored Yet?</h3>
-                    <p>3 Reasons Why Your Book Club Sucks</p>
-                </article>
-            </a>
+        <div id="share">
+            <h2>Help Us Grow!</h2>
+            <div id="share-container">
+                <!-- <iframe width="560" height="560"  src="https://youtube.com/shorts/sJz9F1zifbY?"></iframe> -->
+                <video width="560" height="560" autoplay muted loop controls playsinline>
+                    <source src="./media/share-video.mp4" type="video/mp4">
+                </video>
+                <p style="color: #1a1a3d;">
+                    Share this website on social media with your friends and tag us @wildmoonbookclub for an entry into our monthly drawing for a change to win a copy of a book on our upcoming reading list!
+                </p>
+                <a href="#" onclick="event.preventDefault();">
+                    <button type="button">🗣️ Share This!</button>
+                </a>
+            </div>
         </div>
          
         <!-- footer [PLACEHOLDER] [ADDED IN UNIT 3] -->
@@ -219,9 +250,9 @@ When To Modify:
             <div class="footer-content">
                 <p>&copy; 2025 Wild Moon Collective. All Rights Reserved.</p>
                 <nav class="footer-nav">
+                    <a href="#">Home</a>
                     <a href="#about">About</a>
-                    <a href="#schedule">Upcoming Meetings</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#schedule">Event Schedule</a>
                 </nav>
             </div>
         </footer>
