@@ -29,13 +29,10 @@ let rsvpButton = document.getElementById("rsvp-button");
 let count = 3;
 
 //write a function that adds participant to list + displays it with count
-const addParticipant = (event) => {
-
-    let nameInput = document.getElementById("name").value;
-    let cityInput = document.getElementById("city").value;
+const addParticipant = (person) => {
 
     let newRSVP = document.createElement("p");
-    newRSVP.textContent = `📖 ${nameInput} from ${cityInput} signed up!`;
+    newRSVP.textContent = `✅ ${person.name} from ${person.city} signed up!`;
 
     let rsvpList = document.querySelector(".rsvp-participants");
     rsvpList.appendChild(newRSVP);
@@ -47,14 +44,11 @@ const addParticipant = (event) => {
 
     let newCount = document.createElement("p");
     newCount.id = "rsvp-count";
-    newCount.textContent = "✨We’ve got " + count + " RSVPs — the circle is forming beautifully. Are you next?";
+    newCount.textContent = "✨So far " + count + " RSVPs — the circle is forming beautifully! Are you next?";
 
     document.querySelector(".rsvp-participants").appendChild(newCount);
 };
 
-//add click event to form submit button to add participant to list on submit
-//Deleted event listener
-// rsvpButton.addEventListener("click", addParticipant);
 
 /*** Form Validation ***  
   Purpose:
@@ -74,7 +68,15 @@ const validateForm = (event) => {
   event.preventDefault();
   
   let containsErrors = false;
+  
   var rsvpInputs = document.getElementById("rsvp-form").elements;
+  
+  let person = {
+    name: rsvpInputs[0].value,
+    city: rsvpInputs[1].value,
+    email: rsvpInputs[2].value,
+    phone: rsvpInputs[3].value
+  }
 
   // TODO: Loop through all inputs
   for (let i = 0; i < rsvpInputs.length; i++) {
@@ -87,13 +89,15 @@ const validateForm = (event) => {
       continue;
     }
     
-    if(input.value.length < 2) {
+    //if(input.value.length < 2) {
+    if(person.name.length < 2 || person.city.length < 2) {
       containsErrors = true;
       input.classList.add("error");
     } else {
       input.classList.remove("error");
     }
   }
+
   //Stretch: Email Validation
 
   //create variable for email input from form
@@ -109,7 +113,8 @@ const validateForm = (event) => {
 
   // TODO: If no errors, call addParticipant() and clear fields
   if(containsErrors === false) {
-    addParticipant(event);
+    addParticipant(person);
+    toggleModal(person)
 
     for (let i = 0; i < rsvpInputs.length; i++) {
       rsvpInputs[i].value = "";
@@ -121,7 +126,56 @@ const validateForm = (event) => {
 let form = document.getElementById("rsvp-form");
 form.addEventListener("submit", validateForm);
 /*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
-/*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
+
+/*** Modal ***
+  
+  Purpose:
+  - Use this starter code to add a pop-up modal to your website.
+
+  When To Modify:
+  - [ ] Project 9 (REQUIRED FEATURE)
+  - [ ] Project 9 (STRETCH FEATURE)
+  - [ ] Any time after
+***/
+
+const toggleModal = (person) => {
+  let modal = document.getElementById("success-modal");
+  let modalText = document.getElementById("modal-text");
+  
+  // TODO: Update modal display to flex
+  modal.style.display = "flex";
+
+  // TODO: Update modal text to personalized message
+  modalText.textContent = `Thank you for signing up, ${person.name}! We look forward to seeing you at the meeting!`;
+
+  // Set modal timeout to 5 seconds
+  let intervalId = setInterval(animateImage, 500); //animate image
+
+  setTimeout(() => {
+    modal.style.display = "none";
+    clearInterval(intervalId);
+  }, 5000);
+  
+};
+
+// TODO: animation variables and animateImage() function
+
+let rotateFactor = 0;
+let modalImage = document.getElementById("modal-anim");
+
+const animateImage = () => {
+  //rotateFactor = rotateFactor === 1 ? 0.8 : 1 [alternative ternary op JsES6]
+  if(rotateFactor === 0) {
+    rotateFactor = -10;
+  } else {
+    rotateFactor = 0;
+  }
+
+  //apply rF to image
+  modalImage.style.transform = `rotate(${rotateFactor}deg)`;
+
+};
+
 
 //document.addEventListener("DOMContentLoaded", function () {
 

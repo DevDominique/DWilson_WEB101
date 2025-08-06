@@ -25,8 +25,7 @@
     
     <body>
     
-        <!-- navbar [PLACEHOLDER] [ADDED IN UNIT 4] -->
-
+        <!-- navbar-->
         <!-- headings
 
         Purpose:
@@ -41,6 +40,7 @@
         -->
        
         <header class="site-header">
+            <!--nav bar-->
             <nav class="navbar">
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -50,7 +50,9 @@
                 </ul>
                 <button type="button" id="theme-button">Toggle Dark Mode</button>
             </nav>
-            <h1 style="text-align: center;">Wild Moon Book Club</h1>
+            <h1 style="text-align: center;">Wild Moon Book Club</h1>\
+
+            <!--hero-->
             <div id="hero">
                 <div class="hero-text">
                     <h2>Click the button to join us at our next meeting!</h2>
@@ -80,14 +82,14 @@
         <div id="about">
             <div class="about-container">
                 <h2 style="text-align: center;">About the Event</h2>            
-                <p>A reading circle for women ready to deepen their sacred wisdom, reclaim their inner power, and awaken their wild feminine essence. Through handpicked books on spirituality, embodiment, and self-discovery, our circle offers an inclusive space for authentic expression, personal growth, and soulful sisterhood.</p>
+                <p>We are a North Dallas reading circle for women ready to deepen their sacred wisdom, reclaim their inner power, and awaken their wild feminine essence. Through handpicked books on spirituality, embodiment, and self-discovery, our in-person circle offers an inclusive space for authentic expression, personal growth, and soulful sisterhood at local gatherings.</p>
 
                 <h3 style="color: white; text-align: center;">What to Expect</h3>
-                <p><i>At <i><strong>Wild Moon</strong></i>, we dont just read books, we awaken their powerful essence. With every title carefully selected in alignment with a celestially-inpired monthly theme, we thrive and flow with the cycles of nature.</i></p>
+                <p><i>At <i><strong>Wild Moon</strong></i>, we dont just read books, we awaken their powerful essence through deep discussions on each text. With every title carefully selected in alignment with a celestially-inpired monthly theme and paired with our home-brewed herbal tea, we thrive and flow with the cycles of nature.</i></p>
                 <ul>
-                    <li> <b>Inspiration:</b> <i>Read an empowering new book each month</i></li>
-                    <li> <b>Growth:</b> <i>Dive deeper through groups discussions on each title</i></li>
-                    <li> <b>Connection:</b> <i>An intimate group setting to inspire sisterhood.</i></li>
+                    <li>🌟<b>Inspiration:</b> <i>Be moved by a compelling book selection and soulful discussions that evoke greater wisdom, insight, critical thinking skills, and inspiration.</i></li>
+                    <li>🌟<b>Growth:</b> <i>Challenge yourself to dive deep into an bouquet of compelling literature through thought-provoking discussions on each title.</i></li>
+                    <li>🌟<b>Connection:</b> <i>An intimate group setting to meet new friends in your local community.</i></li>
                 </ul>
             </div>
         </div>
@@ -154,17 +156,17 @@
 
 
         <!-- rsvp
+        Purpose:
+        - Section for users to sign up for the event
+        - Contains a form for users to input their information, 
+        and a list of other users who have signed up
 
-Purpose:
-- Section for users to sign up for the event
-- Contains a form for users to input their information, 
-and a list of other users who have signed up
+        When To Modify:
+        - [ ] Project 6 (REQUIRED FEATURE) 
+        - [ ] Project 6 (STRETCH FEATURE) 
+        - [ ] Any time after
+        --> 
 
-When To Modify:
-- [ ] Project 6 (REQUIRED FEATURE) 
-- [ ] Project 6 (STRETCH FEATURE) 
-- [ ] Any time after
---> 
         <div id="rsvp">
             <h2>RSVP</h2>
             <img src="./media/rsvp-books-tea.png" alt="two books stacked on a cozy coffee table near an earthy teal vat of freshly brewed tea" class="faded-img">
@@ -174,10 +176,10 @@ When To Modify:
                     <p>Our gatherings offer a warm infusion of heartfelt dialogue, healing insight, and feminine wisdom — drawn from the pages of soul-stirring books and shared in sacred circle. To complement the energy of each month's theme, we serve a unique herbal tea blend handpicked to nourish, balance, and awaken. From grounding roots to floral whispers, each sip is part of the feminine mystery — brewed with intention, stirred by sisterhood. Sign up below to join us at our next gathering.</p>
                 </div>
                 <div class="rsvp-participants">
-                    <p>📖 Sara from Plano signed up!</p>
-                    <p>📖 Amy from Lewisville signed up!</p>
-                    <p>📖 Monica from Aubrey signed up!</p>
-                    <p id="rsvp-count">✨We’ve got 3 RSVPs — the circle is forming beautifully! Are you next?</p>
+                    <p>✅ Sara from Plano signed up!</p>
+                    <p>✅ Amy from Lewisville signed up!</p>
+                    <p>✅ Monica from Aubrey signed up!</p>
+                    <p id="rsvp-count">✨So far 3 RSVPs — the circle is forming beautifully! Are you next?</p>
                 </div>
             </div>
 
@@ -199,7 +201,30 @@ When To Modify:
             </div>      
         </div>
 
-        <!-- success modal [PLACEHOLDER] [ADDED IN UNIT 9] --> 
+        <!-- success modal
+
+        Purpose:
+        - Modal that appears when a user successfully signs up for the event
+        - Contains a personalized message and image
+
+        When To Modify:
+        - [ ] Project 9 (REQUIRED FEATURE)
+        - [ ] Project 9 (STRETCH FEATURE) 
+        - [ ] Any time after
+        --> 
+
+        <div id="success-modal" class="modal">
+            <div class="modal-container">
+                <div class="modal-item">
+                    <p id="modal-text">✨You're In!✨</br></br>Thank you for signing up. We can't wait to see you at our next meeting!</p>
+                </div>
+                <div class="modal-item">
+                    <img id="modal-anim" src="./media/modal-image.png" alt="A multicolore stack of mysical books">
+                </div>
+            </div>
+        </div>
+
+ 
 
         <!-- links
 
@@ -232,7 +257,6 @@ When To Modify:
         <div id="share">
             <h2>Help Us Grow!</h2>
             <div id="share-container">
-                <!-- <iframe width="560" height="560"  src="https://youtube.com/shorts/sJz9F1zifbY?"></iframe> -->
                 <video width="560" height="560" autoplay muted loop controls playsinline>
                     <source src="./media/share-video.mp4" type="video/mp4">
                 </video>
@@ -245,7 +269,7 @@ When To Modify:
             </div>
         </div>
          
-        <!-- footer [PLACEHOLDER] [ADDED IN UNIT 3] -->
+        <!-- footer -->
         <footer class="site-footer">
             <div class="footer-content">
                 <p>&copy; 2025 Wild Moon Collective. All Rights Reserved.</p>
@@ -253,12 +277,12 @@ When To Modify:
                     <a href="#">Home</a>
                     <a href="#about">About</a>
                     <a href="#schedule">Event Schedule</a>
+                    <a href="#rsvp">RSVP</a>
+                    <a href="#links">Links</a>
                 </nav>
             </div>
         </footer>
-
-        <!-- script [PLACEHOLDER] [ADDED IN UNIT 5] -->
-    
+  
         <script src="script.js"></script>    
     </body>
 </html>
