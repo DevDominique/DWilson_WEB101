@@ -228,7 +228,28 @@ button:hover {
   transition: background-color 0.3s ease;
 }
 
-#theme-button {
+#nav-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+#nav-buttons button {
+  background-color: #3e3377;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration:none;
+  font-weight: bolder;
+  border-color:white;
+  border-width: 15px;
+  cursor: pointer;
+}
+
+#nav-buttons button:hover {
+  background-color:#045d5d;
+}
+
+#reduce-motion {
   background-color: #3e3377;
   color: white;
   padding: 0.5rem 1rem;
@@ -597,7 +618,7 @@ input[type="submit"] {
     max-width: 50%;
 }
 
-.modal-text{
+.modal-text {
   text-align: left;
   line-height: 1.6;
   font-size: 1.1rem;

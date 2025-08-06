@@ -14,13 +14,22 @@ let themeButton = document.getElementById("theme-button");
 
 // Step 2: Write the callback function
 const toggleDarkMode = () => {
-    document.body.classList.toggle("dark-mode");
+  document.body.classList.toggle("dark-mode");
 };
 
 // Step 3: Register a 'click' event listener for the theme button,
 //             and tell it to use toggleDarkMode as its callback function
 themeButton.addEventListener("click", toggleDarkMode);
 
+/** Reduce Motion Button**/
+let motionEnabled = true;
+
+const toggleReduceMotion = () => {
+  motionEnabled = !motionEnabled;
+
+  const button = document.getElementById("reduce-motion");
+  button.textContent = motionEnabled ? "Reduce Motion" : "Enable Motion";
+};
 
 /*** Form Handling [PLACEHOLDER] [ADDED IN UNIT 6] ***/
 
@@ -125,7 +134,6 @@ const validateForm = (event) => {
 // Step 3: Replace the form button's event listener with a new one that calls validateForm()
 let form = document.getElementById("rsvp-form");
 form.addEventListener("submit", validateForm);
-/*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
 
 /*** Modal ***
   
@@ -146,7 +154,18 @@ const toggleModal = (person) => {
   modal.style.display = "flex";
 
   // TODO: Update modal text to personalized message
-  modalText.textContent = `Thank you for signing up, ${person.name}! We look forward to seeing you at the meeting!`;
+  modalText.innerHTML = `
+  <p>Thank you for signing up, ${person.name}! We look forward to seeing you at the meeting!</p>
+  <button id="modal-close">Close</button>
+  `;
+
+  //Add a 'close' button
+  let exitModal = document.getElementById("modal-close");
+
+  exitModal.addEventListener("click", () => {
+    modal.style.display = "none";
+    clearInterval(intervalId);
+  });
 
   // Set modal timeout to 5 seconds
   let intervalId = setInterval(animateImage, 500); //animate image
@@ -159,11 +178,12 @@ const toggleModal = (person) => {
 };
 
 // TODO: animation variables and animateImage() function
-
 let rotateFactor = 0;
 let modalImage = document.getElementById("modal-anim");
 
 const animateImage = () => {
+  if (!motionEnabled) return;
+
   //rotateFactor = rotateFactor === 1 ? 0.8 : 1 [alternative ternary op JsES6]
   if(rotateFactor === 0) {
     rotateFactor = -10;
@@ -173,7 +193,6 @@ const animateImage = () => {
 
   //apply rF to image
   modalImage.style.transform = `rotate(${rotateFactor}deg)`;
-
 };
 
 
@@ -198,3 +217,5 @@ leftBtn.addEventListener('click', () => {
 rightBtn.addEventListener('click', () => {
   carousel.scrollBy({ left: scrollAmount, bahavior:'smooth' });
 });
+
+document.getElementById("reduce-motion").addEventListener("click", toggleReduceMotion);
